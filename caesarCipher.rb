@@ -18,21 +18,12 @@ end
 puts "Enter a string and a number (separate with two spaces and the string must not contain digits)"
 chr_to_shift = gets.chomp
 chr_to_shift = chr_to_shift.split(/\s\s/)
-if chr_to_shift.first.split('').any?(/\d/)
-    while chr_to_shift.first.split('').any?(/\D/)
+    while chr_to_shift.first.split('').any?(/\d/)
         puts "Please follow the instructions"
         puts "Enter a string and a number (separate with two spaces and the string must not contain digits)"
         chr_to_shift = gets.chomp
         chr_to_shift = chr_to_shift.split(/\s\s/)
-        if(chr_to_shift.first.split('').all?(/\D/))
-            string = chr_to_shift[0]
-            number = chr_to_shift[1].to_i
-            shift_letters(string, number)
-         break
-      end
-    end
-else 
+    end 
     string = chr_to_shift[0]
     number = chr_to_shift[1].to_i
     shift_letters(string, number)
-end
