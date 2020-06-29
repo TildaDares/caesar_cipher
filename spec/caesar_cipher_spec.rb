@@ -1,14 +1,14 @@
 require './caesar_cipher'
 describe "#shift_letters" do
-  it "returns letters shifted by 1" do
+  it "returns letters shifted by a number" do
     expect(shift_letters('Aaa', 1)).to eql('Bbb')
   end
 
-  it "returns letters shifted by 1" do
+  it "returns letters shifted by a number" do
     expect(shift_letters('Bbb', 1)).to eql('Ccc')
   end
 
-  it "returns letters shifted back to the start(a/A)" do
+  it "wraps" do
     expect(shift_letters('Zz', 1)).to eql('Aa')
   end
 
