@@ -1,5 +1,5 @@
 require './caesar_cipher'
-describe "#shift_letters" do
+describe '#shift_letters' do
   it 'returns letters shifted by a number' do
     expect(shift_letters('Aaa', 1)).to eql('Bbb')
   end
